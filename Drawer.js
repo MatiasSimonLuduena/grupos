@@ -1,8 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-import { Text } from "react-native"
-
 // components
 import Home from './components/Home';
 import Perfil from "./components/Perfil";
@@ -27,23 +25,23 @@ export default function Drawer() {
         <DrawerN.Navigator initialRouteName="INICIO">
             {array.map((item) => (
                 <DrawerN.Screen
-                key={item.name}
-                name={item.name}
-                component={item.component}
-                options={{
-                    headerStyle: {
-                    backgroundColor: '#3f8880',
-                    },
-                    headerTintColor: 'white',
-                    drawerIcon: ({ focused }) => (
-                    <FontAwesome5
-                        name={item.icon}
-                        size={20}
-                        color={focused ? '#3f8880' : 'black'}
-                    />
-                    ),
-                    drawerActiveTintColor: '#3f8880',
-                }}
+                    key={item.name}
+                    name={item.name}
+                    component={item.component}
+                    options={{
+                        headerStyle: {
+                        backgroundColor: '#3f8880',
+                        },
+                        headerTintColor: 'white',
+                        drawerIcon: ({ focused }) => (
+                        <FontAwesome5
+                            name={item.icon}
+                            size={20}
+                            color={focused ? '#3f8880' : 'black'}
+                        />
+                        ),
+                        drawerActiveTintColor: '#3f8880',
+                    }}
                 />
             ))}
         </DrawerN.Navigator>
